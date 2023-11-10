@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct TripListAppApp: App {
+    
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                
         }
     }
 }

@@ -11,6 +11,13 @@
 		BA4D5CB82AFE5AB400AF1AEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D5CB72AFE5AB400AF1AEE /* ContentView.swift */; };
 		BA4D5CBA2AFE5AB500AF1AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4D5CB92AFE5AB500AF1AEE /* Assets.xcassets */; };
 		BA4D5CBD2AFE5AB500AF1AEE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4D5CBC2AFE5AB500AF1AEE /* Preview Assets.xcassets */; };
+		BA4D5CC62AFE5B4B00AF1AEE /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D5CC52AFE5B4B00AF1AEE /* Trip.swift */; };
+		BA4D5CC82AFE5BBE00AF1AEE /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D5CC72AFE5BBE00AF1AEE /* TripViewModel.swift */; };
+		BA4D5CCB2AFE5F1700AF1AEE /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D5CCA2AFE5F1700AF1AEE /* TripList.swift */; };
+		BA4D5CCD2AFE5F5300AF1AEE /* TripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D5CCC2AFE5F5300AF1AEE /* TripDetailsView.swift */; };
+		BA4D5CCF2AFE5F6200AF1AEE /* AddTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D5CCE2AFE5F6200AF1AEE /* AddTrip.swift */; };
+		BA4D5CD12AFE5F8300AF1AEE /* CompletedTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D5CD02AFE5F8300AF1AEE /* CompletedTrips.swift */; };
+		BA4D5CD32AFE603300AF1AEE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D5CD22AFE603300AF1AEE /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		BA4D5CB72AFE5AB400AF1AEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA4D5CB92AFE5AB500AF1AEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA4D5CBC2AFE5AB500AF1AEE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA4D5CC52AFE5B4B00AF1AEE /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		BA4D5CC72AFE5BBE00AF1AEE /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
+		BA4D5CCA2AFE5F1700AF1AEE /* TripList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
+		BA4D5CCC2AFE5F5300AF1AEE /* TripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsView.swift; sourceTree = "<group>"; };
+		BA4D5CCE2AFE5F6200AF1AEE /* AddTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrip.swift; sourceTree = "<group>"; };
+		BA4D5CD02AFE5F8300AF1AEE /* CompletedTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTrips.swift; sourceTree = "<group>"; };
+		BA4D5CD22AFE603300AF1AEE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,10 @@
 		BA4D5CB42AFE5AB400AF1AEE /* TripListApp */ = {
 			isa = PBXGroup;
 			children = (
+				BA4D5CC92AFE5EEA00AF1AEE /* Views */,
+				BA4D5CC42AFE5B2C00AF1AEE /* ViewModel */,
+				BA4D5CC32AFE5B2600AF1AEE /* Model */,
 				BA4D5CB52AFE5AB400AF1AEE /* TripListAppApp.swift */,
-				BA4D5CB72AFE5AB400AF1AEE /* ContentView.swift */,
 				BA4D5CB92AFE5AB500AF1AEE /* Assets.xcassets */,
 				BA4D5CBB2AFE5AB500AF1AEE /* Preview Content */,
 			);
@@ -65,6 +81,35 @@
 				BA4D5CBC2AFE5AB500AF1AEE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA4D5CC32AFE5B2600AF1AEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D5CC52AFE5B4B00AF1AEE /* Trip.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA4D5CC42AFE5B2C00AF1AEE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D5CC72AFE5BBE00AF1AEE /* TripViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BA4D5CC92AFE5EEA00AF1AEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D5CB72AFE5AB400AF1AEE /* ContentView.swift */,
+				BA4D5CCA2AFE5F1700AF1AEE /* TripList.swift */,
+				BA4D5CCC2AFE5F5300AF1AEE /* TripDetailsView.swift */,
+				BA4D5CCE2AFE5F6200AF1AEE /* AddTrip.swift */,
+				BA4D5CD02AFE5F8300AF1AEE /* CompletedTrips.swift */,
+				BA4D5CD22AFE603300AF1AEE /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4D5CC62AFE5B4B00AF1AEE /* Trip.swift in Sources */,
+				BA4D5CCF2AFE5F6200AF1AEE /* AddTrip.swift in Sources */,
+				BA4D5CCB2AFE5F1700AF1AEE /* TripList.swift in Sources */,
+				BA4D5CD32AFE603300AF1AEE /* SettingsView.swift in Sources */,
+				BA4D5CCD2AFE5F5300AF1AEE /* TripDetailsView.swift in Sources */,
+				BA4D5CC82AFE5BBE00AF1AEE /* TripViewModel.swift in Sources */,
 				BA4D5CB82AFE5AB400AF1AEE /* ContentView.swift in Sources */,
+				BA4D5CD12AFE5F8300AF1AEE /* CompletedTrips.swift in Sources */,
 				BA4D5CB62AFE5AB400AF1AEE /* TripListAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
