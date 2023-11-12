@@ -6,24 +6,33 @@
 //
 
 import SwiftUI
+import Foundation
+
+
 
 struct TripDetailsView: View {
     
     @Bindable var trip: Trip
     
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
                 Text(trip.destination)
-                    .font(.largeTitle)
+                    .font(.title)
                     .fontWeight(.bold)
                 Image(trip.image)
                     .resizable()
                     .scaledToFit()
                 
                 Text(trip.notes)
-                Text("Start Date : \(trip.startDate.formatted())")
-                Text("End Date : \(trip.endDate.formatted())")
+                
+                
+                    DatePicker("Start Date", selection: $trip.startDate, displayedComponents: [.date])
+                        .datePickerStyle(.compact)
+                DatePicker("End Date", selection: $trip.endDate, displayedComponents: [.date])
+                    .datePickerStyle(.compact)
+                
                 HStack{
                     Text("Trip Status : ")
                     Spacer()
@@ -34,6 +43,7 @@ struct TripDetailsView: View {
                     })
                     
                 }
+                .padding()
                 
                 Spacer()
             }

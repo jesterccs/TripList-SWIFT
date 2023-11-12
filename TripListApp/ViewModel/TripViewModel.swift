@@ -76,7 +76,15 @@ import Observation
         trips.append(trip5)
     }
     
+    func addTrip(tripModel: Trip) {
+        trips.append(tripModel)
+    }
+    
     func deleteTrip(index: IndexSet) {
         trips.remove(atOffsets: index)
+    }
+    
+    func returnCompletedTrips() -> [Trip] {
+        return trips.filter({ $0.status == .completed })
     }
 }

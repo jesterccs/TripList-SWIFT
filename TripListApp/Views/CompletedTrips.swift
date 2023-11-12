@@ -8,11 +8,43 @@
 import SwiftUI
 
 struct CompletedTrips: View {
+    
+    var tripViewModel: TripViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                List {
+                    ForEach(tripViewModel.returnCompletedTrips()) { trip in
+                        NavigationLink(destination: {
+                            TripDetailsView(trip: trip)
+                        }, label: {
+                            HStack {
+                                Image(trip.image)
+                                    .resizable()
+                                    .frame(width: 120, height: 100)
+                                    .cornerRadius(20)
+                                VStack {
+                                    Text(trip.destination)
+                                    if trip.status == .completed {
+                                        Text(trip.status.rawValue).foregroundColor(.green)
+                                    } else if trip.status == .inProgress {
+                                        Text(trip.status.rawValue).foregroundColor(.red)
+                                    } else {
+                                        Text(trip.status.rawValue).foregroundColor(.blue)
+                                    }
+                                    
+                                }
+                            }
+                        })
+                    }
+                }.listStyle(.plain)
+            }
+            .navigationTitle("Completed Trips")
+        }
     }
 }
 
 #Preview {
-    CompletedTrips()
+    CompletedTrips(tripViewModel: TripViewModel())
 }

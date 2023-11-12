@@ -10,7 +10,9 @@ import SwiftUI
 struct TripList: View {
     
     var tripViewModel: TripViewModel
-    
+    @State var sheetEnabled: Bool = false
+    var selectedColor: Color
+    var fontSize: Double
     
     var body: some View {
         NavigationStack {
@@ -27,6 +29,7 @@ struct TripList: View {
                                     .cornerRadius(20)
                                 VStack {
                                     Text(trip.destination)
+                                        .foregroundColor(selectedColor)
                                     if trip.status == .completed {
                                         Text(trip.status.rawValue).foregroundColor(.green)
                                     } else if trip.status == .inProgress {
@@ -36,6 +39,7 @@ struct TripList: View {
                                     }
                                     
                                 }
+                                .font(.system(size: fontSize))
                             }
                         })
                     }
@@ -45,19 +49,24 @@ struct TripList: View {
                 }.listStyle(.plain)
             }
             .padding()
-            .navigationTitle("Trips")
+            .navigationTitle(Text("Trips").foregroundColor(selectedColor))
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing, content: {
-                    NavigationLink(destination: AddTrip(), label: {
-                        Text("Add")
+                    Button(action: {
+                        sheetEnabled.toggle()
+                    }, label: {
+                        Image(systemName: "plus")
                     })
                 })
+            })
+            .sheet(isPresented: $sheetEnabled, content: {
+                AddTrip(tripViewModel: tripViewModel)
             })
         }
     }
 }
 
 #Preview {
-    TripList(tripViewModel: TripViewModel())
+    TripList(tripViewModel: TripViewModel(), selectedColor: .black, fontSize: 20.0)
         
 }
